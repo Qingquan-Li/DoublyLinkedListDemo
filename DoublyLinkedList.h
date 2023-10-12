@@ -1,3 +1,6 @@
+#include <iostream>
+using namespace std;
+
 #ifndef DOUBLYLINKEDLIST_H
 #define DOUBLYLINKEDLIST_H
 
@@ -64,8 +67,5 @@ public:
     void destroy();
     void copy(const DoublyLinkedList<T>& other);
 };
-
-// It is necessary to include the .cpp file here because of the template class.
-#include "DoublyLinkedList.cpp"
 
 #endif

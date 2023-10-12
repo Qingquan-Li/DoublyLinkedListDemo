@@ -1,6 +1,6 @@
-#include "DoublyLinkedList.h"
-#include <iostream>
+#include "DoublyLinkedList.cpp"
 
+#include <iostream>
 using namespace std;
 
 // Function Prototypes
@@ -42,11 +42,13 @@ int main()
                 findItem(list);
                 break;
             case 5:
+                cout << "Length of the list: " << list.getLength() << endl;
                 for (auto it = list.begin(); it != list.end(); ++it)
                     cout << *it << " ";
                 cout << endl;
                 break;
             case 6:
+                cout << "Length of the list: " << list.getLength() << endl;
                 for (auto it = list.rbegin(); it != list.rend(); --it)
                     cout << *it << " ";
                 cout << endl;
@@ -80,6 +82,10 @@ void insertBackItem(DoublyLinkedList<int>& list)
 
 void deleteItem(DoublyLinkedList<int>& list)
 {
+    if (list.isEmpty()) {
+        cout << "List is empty. Nothing to delete!" << endl;
+        return;
+    }
     int item;
     cout << "Enter item to delete: ";
     cin >> item;
@@ -97,6 +103,10 @@ void deleteItem(DoublyLinkedList<int>& list)
  */
 void findItem(DoublyLinkedList<int>& list)
 {
+    if (list.isEmpty()) {
+        cout << "List is empty. Nothing to search for!" << endl;
+        return;
+    }
     int item;
     cout << "Search the list for a given item: ";
     cin >> item;

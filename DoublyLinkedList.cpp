@@ -1,6 +1,4 @@
-//#include "DoublyLinkedList.h"
-#include <iostream>
-using namespace std;
+#include "DoublyLinkedList.h"
 
 template <class T>
 DoublyLinkedList<T>::DoublyLinkedList() : first(nullptr), last(nullptr), length(0) {}
